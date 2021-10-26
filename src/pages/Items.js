@@ -1,6 +1,7 @@
-import { ListGroup, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Product from '../components/Product';
 
 
 
@@ -19,12 +20,13 @@ export default function Items() {
     }, []);
 
     return (
+        <div className='container'>
+        <h2>Available Items.</h2>
+        <h4>Click <button className='bi bi-bag-plus'></button> To Add To <button className='bi bi-cart'></button></h4>
+        <hr />
         <ul>
-            {data.map(item => (
-                <li key={item.id}>
-                    <a href={item.url}>{item.name}</a>
-                </li>
-            ))}
+            {data.map((item,index) => <Product key={index} item={item} />)}
         </ul>
+        </div>
     );
 }
