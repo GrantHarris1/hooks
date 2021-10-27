@@ -1,3 +1,5 @@
+
+   
 import React from 'react'
 
 export default function Product(props) {
@@ -5,7 +7,9 @@ export default function Product(props) {
         <li>
             <a href={props.url}>{props.item.name}</a>&nbsp;&nbsp;
 
-            <button className='bi bi-bag-plus'></button>
+            <button onClick={() => props.addToCart(props.item.id)} className='bi bi-bag-plus' />
         </li>
     )
 }
+
+
