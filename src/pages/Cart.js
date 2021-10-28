@@ -10,11 +10,21 @@ export default function Cart(props) {
     const deleteItem = (id) => {
         let tmpCart = props.cart.filter(product => {
             if (id !== product.id) {
-                // todoItem.completed = !todoItem.completed
-                console.log(product)
+
                 return product
             }
-           
+
+        })
+        props.setCart(tmpCart)
+    }
+
+     const clearAll = (id) => {
+        let tmpCart = props.cart.filter(product => {
+            if (id) {
+
+                return <p>empty.</p>
+            }
+
         })
         props.setCart(tmpCart)
     }
@@ -24,7 +34,8 @@ export default function Cart(props) {
         <div>
 
             <h2>Your current Cart</h2>
-            <Form>
+            <h4>Your current total is ${props.cartobj[0]}</h4>
+            <Form className='text-light'>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
@@ -76,11 +87,11 @@ export default function Cart(props) {
                     <Form.Check type="checkbox" label="Check out now" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button  onClick={clearAll}variant="primary" type="submit">
                     Clear Cart
   </Button>&nbsp;
 
-    <Button variant="primary" type="submit">
+    <Button variant="primary" type="submit" href= 'www.venmo.com/u/Grant_Harris_'>
                     Submit
   </Button>&nbsp;
 

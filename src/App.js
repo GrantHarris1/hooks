@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import Home from './pages/Home';
 import Cart from './pages/Cart';
 import {
     BrowserRouter as Router,
@@ -10,7 +9,6 @@ import {
 import Product from './components/Product';
 import axios from 'axios'
 import Headline from './components/Headline';
-import { Link } from 'react-router-dom';
 import { Row } from 'react-bootstrap';
 
 // import Headline from './components/Headline';
@@ -39,17 +37,25 @@ function App() {
                 'https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/products',
 
             );
-
+                console.log(result.data)
             setData(result.data);
         }
         fetchData();
     }, []);
 
+    const calculateCart = () =>{
+        // get cart from state , create var , map, oject total cart, total price
+       let cartTot = cart.reduce((accumulator, current) => accumulator + current.price, 0);
+       let num = cart.length;
+    
+        return [cartTot, num];
 
+    }
 
-
+    let cartobj = calculateCart();
 
     return (
+        
         <>
 
             <Router>
@@ -59,11 +65,11 @@ function App() {
             <Home />
           </Route> */}
                     <Route path="/cart">
-                        <Cart cart={cart} setCart = {setCart} />
+                        <Cart cart={cart} setCart={setCart} cartobj={cartobj} />
                     </Route>
                     <Route path={["/home", "/",]}>
                         <>
-                            <Home />
+
                             <div className='container'>
                                 <h2>Available Items.</h2>
                                 <h4>Click <i class="bi bi-bag-plus"></i> To Add To <i class="bi bi-cart"></i></h4>
