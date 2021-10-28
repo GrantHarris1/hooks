@@ -7,5 +7,5 @@ import Product from '../components/Product';
 
 
 export default function Items() {
-return <h1>items will go here</h1>
+return <h1>&nbsp;</h1>
 }
