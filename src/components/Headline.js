@@ -14,7 +14,7 @@ export default function Headline() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
 
-                            <NavLink className='btn btn-outline-secondary' to="/home" activeClassName="selected">Home</NavLink>&nbsp;
+                            <NavLink className='btn btn-outline-secondary' to="/home" activeClassName="selected">Products</NavLink>&nbsp;
                             <br />
                             <NavLink className='btn btn-outline-secondary' to="/cart" activeClassName="selected">Your Cart</NavLink>
 
