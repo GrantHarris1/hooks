@@ -12,7 +12,7 @@ export default function Product(props) {
         <Col xm={4}
             sm={4} md={4} lg={4}
         >
-            <Card className='h-100'>
+            <Card className='h-100 rounded'>
                 <Card.Img variant="top" src={props.item?.image} />
                 <Card.Body>
                     <Card.Title>{props.item?.name}</Card.Title>

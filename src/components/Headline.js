@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 export default function Headline() {
     return (
         <header className='header text-center'>
-            <title className='text-center'>Grant's Bait | Tackle</title>
+            <title className='text-center'> 🐠Grants. 🎣</title>
             <Navbar bg="dark" text='light' expand="lg">
                 <Container>
                     <Navbar.Brand href="#home" className='text-light'>Grant's Bait | Tackle</Navbar.Brand>
