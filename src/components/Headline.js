@@ -7,9 +7,9 @@ export default function Headline() {
     return (
         <header className='header text-center'>
             <title className='text-center'>Grant's Bait | Tackle</title>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" text='light' expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Grant's Bait | Tackle</Navbar.Brand>
+                    <Navbar.Brand href="#home" className='text-light'>Grant's Bait | Tackle</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
@@ -22,7 +22,7 @@ export default function Headline() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <h1 className='text-center'>Welcome to Grant's.</h1>
+            <h1 className='text-center neonText '>Welcome to Grant's.</h1>
         </header>
     )
 }

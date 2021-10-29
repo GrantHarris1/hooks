@@ -71,11 +71,11 @@ function App() {
                         <>
 
                             <div className='container'>
-                                <h2>Available Items.</h2>
-                                <h4>Click <i class="bi bi-bag-plus"></i> To Add To <i class="bi bi-cart"></i></h4>
+                                <h2 className='neonText'>Available Items.</h2>
+                                <h4 className='neonText'>Click <i class="bi bi-bag-plus"></i> To Add To <i class="bi bi-cart"></i></h4>
                                 <hr />
                                 <ul>
-                                    <Row className="g-4">
+                                    <Row className="g-4 text-secondary">
                                         {data.map((item, index) => <Product key={index} item={item} addToCart={addToCart} cartNum={cart.length} />)}
                                     </Row>
                                 </ul>

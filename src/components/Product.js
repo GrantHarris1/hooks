@@ -17,7 +17,7 @@ export default function Product(props) {
                 <Card.Body>
                     <Card.Title>{props.item?.name}</Card.Title>
                     <Card.Text>
-                        <p>cost ${props.item.price}</p>
+                        <p className='neonText'>cost ${props.item.price}</p>
                         {props.item?.description}
                     </Card.Text>
                     {
@@ -26,7 +26,7 @@ export default function Product(props) {
                             <button onClick={() => props.deleteItem(props.item.id)}>delete</button>
                             :
                             <>
-                                <Link className="text-dark bi bi-bag-plus" onClick={() => props.addToCart(props.item.id)} to='/cart' >Add To Cart</Link >&nbsp;
+                                <Link className="text-dark bi bi-bag-plus neonText" onClick={() => props.addToCart(props.item.id)} to='/cart' >Add To Cart</Link >&nbsp;
                                 Items Currently in cart: {props.cartNum}
                             </>
                     }

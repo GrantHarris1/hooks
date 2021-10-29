@@ -33,8 +33,8 @@ export default function Cart(props) {
     return (
         <div>
 
-            <h2>Your current Cart</h2>
-            <h4>Your current total is ${props.cartobj[0]}</h4>
+            <h2 className='neonText'>&nbsp;</h2>
+            <h4 className='neonText' >Your current total is ${props.cartobj[0]}</h4>
             <Form className='text-light'>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
@@ -87,15 +87,15 @@ export default function Cart(props) {
                     <Form.Check type="checkbox" label="Check out now" />
                 </Form.Group>
 
-                <Button  onClick={clearAll}variant="primary" type="submit">
+                <Button  onClick={clearAll}variant="primary" type="submit" className='bg-dark neonText border-light' >
                     Clear Cart
   </Button>&nbsp;
 
-    <Button variant="primary" type="submit" href= 'www.venmo.com/u/Grant_Harris_'>
+    <Button variant="primary" type="submit" href= 'www.venmo.com/u/Grant_Harris_' className=' border-light bg-dark neonText'>
                     Submit
   </Button>&nbsp;
 
-  <Button as={Link} variant="primary" type="submit" to="/">
+  <Button as={Link} variant="primary" type="submit" to="/" className='bg-dark neonText border-light'>
                     Back to Products
   </Button>
 
