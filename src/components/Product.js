@@ -23,9 +23,11 @@ export default function Product(props) {
                     {
                         props.deleteItem
                             ?
-                            <button onClick={() => props.deleteItem(props.item.id)}>delete</button>
+                            <button onClick={() => props.deleteItem(props.item.id)}className='bg-dark neonText border-light rounded'>Delete</button>
+                    
                             :
                             <>
+                            
                                 <Link className="text-dark bi bi-bag-plus neonText" onClick={() => props.addToCart(props.item.id)} to='/cart' >Add To Cart</Link >&nbsp;
                                 Items Currently in cart: {props.cartNum}
                             </>

@@ -18,15 +18,11 @@ export default function Cart(props) {
         props.setCart(tmpCart)
     }
 
-     const clearAll = (id) => {
-        let tmpCart = props.cart.filter(product => {
-            if (id) {
+     const clearAll = () => {
+        
 
-                return <p>empty.</p>
-            }
-
-        })
-        props.setCart(tmpCart)
+       
+        props.setCart([]);
     }
 
 
@@ -87,7 +83,7 @@ export default function Cart(props) {
                     <Form.Check type="checkbox" label="Check out now" />
                 </Form.Group>
 
-                <Button  onClick={clearAll}variant="primary" type="submit" className='bg-dark neonText border-light' >
+                <Button  onClick={clearAll}variant="primary" className='bg-dark neonText border-light' >
                     Clear Cart
   </Button>&nbsp;
 
@@ -98,6 +94,8 @@ export default function Cart(props) {
   <Button as={Link} variant="primary" type="submit" to="/" className='bg-dark neonText border-light'>
                     Back to Products
   </Button>
+  <br/>
+  <br/>
 
             </Form>
             <Row className="g-4">
